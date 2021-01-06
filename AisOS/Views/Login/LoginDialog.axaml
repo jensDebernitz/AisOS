@@ -1,0 +1,51 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:i18N="clr-namespace:AisOS.Localizer"
+        Width="350" 
+        Height="450"
+        d:DesignWidth="350" d:DesignHeight="450"
+        x:Class="AisOS.Views.Login.LoginDialog"
+        WindowStartupLocation="CenterOwner"
+        x:Name="ThisWindow"
+        SizeToContent="WidthAndHeight"
+        HasSystemDecorations="false"
+        Background="{StaticResource WindowBackgroundBrush}">
+
+  <Border>
+    <Grid RowDefinitions="45,1,*">
+        <Grid Grid.Row="0">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="8,0,0,0" Height="40">
+          <Path Width="19.5" Height="28.5" Margin="20,0,12,0" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="{StaticResource ThemeColorBrush}" Data="F1 M 25,27L 46,19L 46,22.25L 28.5,29L 31.75,31.25L 51,23.75L 51,48.5L 31.75,57L 25,52L 25,27 Z "/>
+          <TextBlock Classes="h1" Foreground="{StaticResource ThemeColorBrush}" Text="{i18N:Localize LoginWindowTitle}" Margin="8,2,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,8,0">
+                <Button ToolTip.Tip="System Information"  Width="32" Height="28" Classes="WindowActionButton">
+                    <Image Source="avares://AisOS/Assets/gears.png" Height="20" Width="20" />
+                </Button>
+                </StackPanel>
+      </Grid>
+      <Grid Grid.Row="1" Background="{StaticResource MainWindowSplitBorderBrush}" />
+      <Grid Grid.Row="2">
+        <Grid ColumnDefinitions="*,*,*">
+            <Grid Grid.Column="0" Width="380">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+              <Image Source="avares://AisOS/Assets/employees-server.png" Height="64" Width="64" Margin="0,20,0,0" />
+              <TextBlock Classes="h2" Text="{i18N:Localize LoginWindowLocalLogin}" Margin="0,4,0,12" HorizontalAlignment="Center" Foreground="{DynamicResource MainBlackFontColor}" />
+              <Grid Margin="0,0,0,8">
+                <TextBox Classes="LoginTextBoxStyle" Text="{Binding Username, Mode=TwoWay}"  Watermark="{i18N:Localize LoginWindowWatermarkUsername}"  />
+              </Grid>
+              <Grid Margin="0,0,0,8">                
+                <TextBox Classes="LoginTextBoxStyle" BorderBrush="{Binding PasswordBorderBrush, Mode=TwoWay}" Text="{Binding Password, Mode=TwoWay}" PasswordChar="*" Name="LocalUserNameTextBox" Watermark="{i18N:Localize LoginWindowWatermarkPassword}"  />
+              </Grid>
+              <Grid Margin="0,20,0,8">
+                <Button Classes="AisOsOkButton" IsEnabled="{Binding LoginButtonEnable, Mode=TwoWay}" Command="{Binding Login}" CommandParameter="{Binding ElementName=ThisWindow}" Content="{i18N:Localize LoginWindowButtonText}" Width="220" Height="36" Margin="0,0,0,32"/>
+              </Grid>
+            </StackPanel>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
+  </Border>
+
+</Window>

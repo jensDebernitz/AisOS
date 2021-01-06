@@ -1,0 +1,7 @@
+{
+  "LoginWindowTitle": "Login Window",
+  "LoginWindowLocalLogin": "Local Login",
+  "LoginWindowWatermarkUsername": "Username",
+  "LoginWindowWatermarkPassword": "Password",
+  "LoginWindowButtonText": "Login" 
+}

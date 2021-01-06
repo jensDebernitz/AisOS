@@ -1,0 +1,77 @@
+﻿<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:AisOS"
+             x:Class="AisOS.App">
+  <Application.DataTemplates>
+    <local:ViewLocator/>
+  </Application.DataTemplates>
+
+  <Application.Resources>
+    <SolidColorBrush x:Key="ThemeColorBrush" Color="#2B579A"></SolidColorBrush>
+    <SolidColorBrush x:Key="WindowBackgroundBrush">White</SolidColorBrush>
+    <SolidColorBrush x:Key="MainWhiteFontColor">#FFFFFF</SolidColorBrush>
+    <SolidColorBrush x:Key="MainBlackFontColor">#444444</SolidColorBrush>
+    <SolidColorBrush x:Key="MainWindowSplitBorderBrush" Color="#CCCCCC"></SolidColorBrush>
+    <SolidColorBrush x:Key="UserControlButtonIsPressedBrush" Color="#A3BDE3"></SolidColorBrush>
+    <SolidColorBrush x:Key="ManagementColorBrush" Color="#F1A128"></SolidColorBrush>
+    <SolidColorBrush x:Key="ControlHeaderBackgroundPressedBrush" Color="#D5E1F2"></SolidColorBrush>
+    <SolidColorBrush x:Key="ControlHeaderForegroundPressedBrush" Color="#19478A"></SolidColorBrush>
+    <SolidColorBrush x:Key="UserControlButtonMouseOverBrush" Color="#D5E1F2"></SolidColorBrush>
+    <SolidColorBrush x:Key="DisabledBackgroundBrush" Color="#F6F6F6"></SolidColorBrush>
+    <SolidColorBrush x:Key="NavigationBackgroundColorPressed" Color="#19478A"></SolidColorBrush>
+    <SolidColorBrush x:Key="RequiredBrush" Color="#cc0000"></SolidColorBrush>
+  </Application.Resources>
+
+  <Application.Styles>
+    <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/>
+    <StyleInclude Source="avares://Avalonia.Themes.Default/Accents/BaseLight.xaml"/>
+    <Style Selector="Border">
+      <Setter Property="BorderBrush" Value="{DynamicResource ThemeColorBrush}" />
+      <Setter Property="BorderThickness" Value="2" />
+    </Style>
+
+    <Style Selector="Button.WindowActionButton">
+        <Setter Property="Foreground" Value="{DynamicResource MainBlackFontColor}" />
+        <Setter Property="FontFamily" Value="Metronic Semi Bold" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="Background" Value="Transparent" />
+    </Style>
+
+    <Style  Selector="TextBox.LoginTextBoxStyle">
+      <Setter Property="HorizontalAlignment" Value="Center" />
+      <Setter Property="FontSize" Value="15" />
+      <Setter Property="Foreground" Value="{StaticResource MainBlackFontColor}" />
+      <Setter Property="Background" Value="Transparent" />
+      <Setter Property="Height" Value="36" />
+      <Setter Property="Width" Value="220" />
+      <Setter Property="TextWrapping" Value="Wrap" />
+      <Setter Property="FontFamily" Value="Segoe UI"></Setter>
+      <Setter Property="MinHeight" Value="24"></Setter>
+      <Setter Property="BorderBrush" Value="Black"/>
+      <Setter Property="BorderThickness" Value="2" />
+      <Setter Property="SelectionBrush" Value="{StaticResource NavigationBackgroundColorPressed}" />
+    </Style>
+
+    <Style Selector="Button.AisOsOkButton">
+      <Setter Property="FontSize" Value="15" />
+      <Setter Property="FontFamily" Value="Segoe UI" />
+      <Setter Property="Height" Value="36" />
+      <Setter Property="Width" Value="220" />
+    </Style>
+
+    <Style Selector="TextBlock.h1">
+      <Setter Property="FontSize" Value="20"/>
+      <Setter Property="FontWeight" Value="Normal"/>
+      <Setter Property="FontFamily" Value="Segoe WP" />
+    </Style>
+    <Style Selector="TextBlock.h2">
+      <Setter Property="FontSize" Value="26"/>
+      <Setter Property="FontFamily" Value="Segoe UI Semilight" />
+    </Style>
+
+  </Application.Styles>
+</Application>
