@@ -25,53 +25,11 @@
   <Application.Styles>
     <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/>
     <StyleInclude Source="avares://Avalonia.Themes.Default/Accents/BaseLight.xaml"/>
-    <Style Selector="Border">
-      <Setter Property="BorderBrush" Value="{DynamicResource ThemeColorBrush}" />
-      <Setter Property="BorderThickness" Value="2" />
-    </Style>
+    <StyleInclude Source="/Styles/BorderStyle.axaml"/>
+    <StyleInclude Source="/Styles/ButtonStyle.axaml" />
+    <StyleInclude Source="/Styles/TextBoxStyle.axaml" />
+    <StyleInclude Source="/Styles/TextBlockStyle.axaml" />
 
-    <Style Selector="Button.WindowActionButton">
-        <Setter Property="Foreground" Value="{DynamicResource MainBlackFontColor}" />
-        <Setter Property="FontFamily" Value="Metronic Semi Bold" />
-        <Setter Property="FontSize" Value="12" />
-        <Setter Property="FontWeight" Value="SemiBold" />
-        <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="Margin" Value="0" />
-        <Setter Property="VerticalAlignment" Value="Top" />
-        <Setter Property="Background" Value="Transparent" />
-    </Style>
-
-    <Style  Selector="TextBox.LoginTextBoxStyle">
-      <Setter Property="HorizontalAlignment" Value="Center" />
-      <Setter Property="FontSize" Value="15" />
-      <Setter Property="Foreground" Value="{StaticResource MainBlackFontColor}" />
-      <Setter Property="Background" Value="Transparent" />
-      <Setter Property="Height" Value="36" />
-      <Setter Property="Width" Value="220" />
-      <Setter Property="TextWrapping" Value="Wrap" />
-      <Setter Property="FontFamily" Value="Segoe UI"></Setter>
-      <Setter Property="MinHeight" Value="24"></Setter>
-      <Setter Property="BorderBrush" Value="Black"/>
-      <Setter Property="BorderThickness" Value="2" />
-      <Setter Property="SelectionBrush" Value="{StaticResource NavigationBackgroundColorPressed}" />
-    </Style>
-
-    <Style Selector="Button.AisOsOkButton">
-      <Setter Property="FontSize" Value="15" />
-      <Setter Property="FontFamily" Value="Segoe UI" />
-      <Setter Property="Height" Value="36" />
-      <Setter Property="Width" Value="220" />
-    </Style>
-
-    <Style Selector="TextBlock.h1">
-      <Setter Property="FontSize" Value="20"/>
-      <Setter Property="FontWeight" Value="Normal"/>
-      <Setter Property="FontFamily" Value="Segoe WP" />
-    </Style>
-    <Style Selector="TextBlock.h2">
-      <Setter Property="FontSize" Value="26"/>
-      <Setter Property="FontFamily" Value="Segoe UI Semilight" />
-    </Style>
 
   </Application.Styles>
 </Application>

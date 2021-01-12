@@ -8,8 +8,8 @@
         x:Class="AisOS.Views.Login.LoginDialog"
         WindowStartupLocation="CenterOwner"
         x:Name="ThisWindow"
-        SizeToContent="WidthAndHeight"
         HasSystemDecorations="false"
+        SizeToContent="WidthAndHeight"
         Background="{StaticResource WindowBackgroundBrush}">
 
   <Border>
@@ -20,7 +20,7 @@
           <TextBlock Classes="h1" Foreground="{StaticResource ThemeColorBrush}" Text="{i18N:Localize LoginWindowTitle}" Margin="8,2,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
         </StackPanel>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,8,0">
-                <Button ToolTip.Tip="System Information"  Width="32" Height="28" Classes="WindowActionButton">
+                <Button Click="Button_OnClick" ToolTip.Tip="System Information"  Width="32" Height="28" Classes="WindowActionButton">
                     <Image Source="avares://AisOS/Assets/gears.png" Height="20" Width="20" />
                 </Button>
                 </StackPanel>

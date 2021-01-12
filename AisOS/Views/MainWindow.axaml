@@ -1,8 +1,8 @@
 ﻿<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="clr-namespace:AisOS.ViewModels;assembly=AisOS"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i18N="clr-namespace:AisOS.Localizer"
         Width="800" Height="450"
         WindowState="Maximized"
         WindowStartupLocation="CenterScreen"
@@ -12,13 +12,22 @@
         Background="{DynamicResource WindowBackgroundBrush}"
         Title="AisOS">
 
-    <Design.DataContext>
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
-
   <Border>
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <StackPanel>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="{i18N:Localize MainWindowMenuItemFile}">
+                    <MenuItem Header="{i18N:Localize MainWindowMenuItemFileOpen}"/>
+                    <Separator/>
+                    <MenuItem Header="{i18N:Localize MainWindowMenuItemFileExit}"/>
+                </MenuItem>
+                <MenuItem Header="{i18N:Localize MainWindowMenuItemEdit}">
+                    <MenuItem Header="Copy"/>
+                    <MenuItem Header="Paste"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+      <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </StackPanel>
   </Border>
-
-
 </Window>

@@ -3,5 +3,12 @@
   "LoginWindowLocalLogin": "Lokal Login",
   "LoginWindowWatermarkUsername": "Benutzername",
   "LoginWindowWatermarkPassword": "Passwort",
-  "LoginWindowButtonText": "Anmelden"
+  "LoginWindowButtonText": "Anmelden",
+  "MainWindowMenuItemFile": "_Datei",
+  "MainWindowMenuItemFileOpen": "_Öffnen...",
+  "MainWindowMenuItemFileExit": "_Schliessen",
+  "MainWindowMenuItemEdit": "_Bearbeiten",
+  "LoginConfigurationTitle": "Anmelde Konfiguration",
+  "GeneralOkButton": "Übernehmen",
+  "GeneralOkButton": "Übernehmen"
 }

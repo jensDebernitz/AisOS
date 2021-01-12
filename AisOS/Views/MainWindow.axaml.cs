@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using AisOS.ViewModels;
 using AisOS.Views.Login;
 using AisOsDataBase.DataBaseRoot.Configuration;
 using Avalonia;
@@ -16,6 +17,9 @@ namespace AisOS.Views
 #if DEBUG
             this.AttachDevTools();
 #endif
+            var vm = new MainWindowViewModel();
+            DataContext = vm;
+
             Opened += MainWindow_Opened;
         }
 

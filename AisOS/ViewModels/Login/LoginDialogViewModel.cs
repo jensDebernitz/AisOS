@@ -20,12 +20,21 @@ namespace AisOS.ViewModels.Login
 
         public LoginDialogViewModel()
         {
+            LoadLastUsername();
+
+            UserAccounts userAccounts = new UserAccounts();
+            UserAccount userAccount = userAccounts.GetCollection()
+                .Find(account => account.Credential.UserName == Username).ToList()[0];
+
             var language = "en-US";
+
+            if (userAccount != null)
+            {
+                language = userAccount.Language;
+            }
+
             Localizer.Localizer.Instance.LoadLanguage(language);
             Login = ReactiveCommand.Create<Window>(RunLogin);
-            
-
-            LoadLastUsername();
         }
 
         private void LoadLastUsername()
